@@ -1,0 +1,21 @@
+
+
+.controls-gbc #menu{
+  height: 50vh;
+  max-height: 50vh;
+}
+.menu-closed #menu{
+  display: none;
+}
+
+.menu{
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}

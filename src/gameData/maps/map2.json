@@ -1,0 +1,351 @@
+{
+	"name":"map2",
+	"defaultTile":"grass",
+	"width":128,
+	"height":128,
+	"tiles":{
+		"r5_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r5_c6":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r5_c7":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r5_c8":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r5_c9":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r5_c10":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r5_c11":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r5_c12":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r5_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r6_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r6_c6":{
+			"class":"stone"
+		},
+		"r6_c7":{
+			"object":{
+				"class":"portal hole",
+				"type":"portal",
+				"direction":"c",
+				"map":"map1",
+				"row":1,
+				"col":2
+			}
+		},
+		"r6_c8":{
+			"class":"stone"
+		},
+		"r6_c9":{
+			"class":"stone"
+		},
+		"r6_c10":{
+			"class":"stone"
+		},
+		"r6_c11":{
+			"class":"stone"
+		},
+		"r6_c12":{
+			"class":"stone"
+		},
+		"r6_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r7_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r7_c6":{
+			"class":"stone"
+		},
+		"r7_c7":{
+			"class":"stone"
+		},
+		"r7_c8":{
+			"class":"stone"
+		},
+		"r7_c9":{
+			"class":"stone"
+		},
+		"r7_c10":{
+			"class":"stone"
+		},
+		"r7_c11":{
+			"class":"stone"
+		},
+		"r7_c12":{
+			"class":"stone"
+		},
+		"r7_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r8_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r8_c6":{
+			"class":"stone"
+		},
+		"r8_c7":{
+			"class":"stone"
+		},
+		"r8_c8":{
+			"class":"stone"
+		},
+		"r8_c9":{
+			"class":"stone"
+		},
+		"r8_c10":{
+			"class":"stone"
+		},
+		"r8_c11":{
+			"class":"stone"
+		},
+		"r8_c12":{
+			"class":"stone"
+		},
+		"r8_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r9_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r9_c6":{
+			"class":"stone"
+		},
+		"r9_c7":{
+			"class":"stone"
+		},
+		"r9_c8":{
+			"class":"stone"
+		},
+		"r9_c9":{
+			"class":"stone"
+		},
+		"r9_c10":{
+			"class":"stone"
+		},
+		"r9_c11":{
+			"class":"stone"
+		},
+		"r9_c12":{
+			"class":"stone"
+		},
+		"r9_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r10_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r10_c6":{
+			"class":"stone"
+		},
+		"r10_c7":{
+			"class":"stone"
+		},
+		"r10_c8":{
+			"class":"stone"
+		},
+		"r10_c9":{
+			"class":"stone"
+		},
+		"r10_c10":{
+			"class":"stone"
+		},
+		"r10_c11":{
+			"class":"stone"
+		},
+		"r10_c12":{
+			"class":"stone"
+		},
+		"r10_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r11_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r11_c6":{
+			"class":"stone"
+		},
+		"r11_c7":{
+			"class":"stone"
+		},
+		"r11_c8":{
+			"class":"stone"
+		},
+		"r11_c9":{
+			"class":"stone"
+		},
+		"r11_c10":{
+			"class":"stone"
+		},
+		"r11_c11":{
+			"class":"stone"
+		},
+		"r11_c12":{
+			"class":"stone"
+		},
+		"r11_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r12_c5":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r12_c6":{
+			"class":"stone"
+		},
+		"r12_c7":{
+			"class":"stone"
+		},
+		"r12_c8":{
+			"class":"stone"
+		},
+		"r12_c9":{
+			"class":"stone"
+		},
+		"r12_c10":{
+			"class":"stone"
+		},
+		"r12_c11":{
+			"class":"stone"
+		},
+		"r12_c12":{
+			"class":"stone"
+		},
+		"r12_c13":{
+			"scenery":{
+				"class":"stone wall",
+				"type":"wall"
+			}
+		},
+		"r13_c5":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r13_c6":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r13_c7":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r13_c8":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r13_c9":{
+			"class":"stone"
+		},
+		"r13_c10":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r13_c11":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r13_c12":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		},
+		"r13_c13":{
+			"scenery":{
+				"class":"stone wall face",
+				"type":"wall"
+			}
+		}
+	}
+}

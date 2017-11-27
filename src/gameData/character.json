@@ -1,0 +1,16 @@
+{
+	"money":0,
+	"location":{
+		"map":"map1",
+		"row":2,
+		"col":4,
+		"facing":"s",
+		"foot":"l"
+	},
+	"stats":{
+		"xp":0,
+		"level":1,
+		"health":20
+	},
+	"inventory":[]
+}

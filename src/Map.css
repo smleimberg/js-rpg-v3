@@ -1,0 +1,54 @@
+
+
+.controls-gbc #map{
+  height: 50vh;
+  max-height: 50vh;
+}
+.menu-open #map{
+  display: none;
+}
+
+.map{
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background-color: #111;
+  overflow: hidden;
+  transform-origin: 0 0;
+  text-align: center;
+}
+.table{
+  display: table;
+}
+.table-cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+.map .tile-wrap{
+  display: inline-block;
+  max-height: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  line-height: 1;
+}
+.map .row{
+  display: block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  line-height: 1;
+}
+.map .row .column{
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+}

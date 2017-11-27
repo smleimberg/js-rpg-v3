@@ -1,0 +1,143 @@
+
+
+/* APP STATES */
+.controls-gbc #controls{
+  display: block;
+  pointer-events: all;
+}
+
+/* CONTROLS */
+#controls{
+    display: none;
+    pointer-events: none;
+    position: fixed;
+    height: 50vh;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+}
+#controls .btn span{
+  display: none;
+}
+#controls #dpad{
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    max-width: 40vh;
+    max-height: 40vh;
+    left: 5vw;
+    top: 5vh;
+}
+#controls #dpad .btn{
+    position: absolute;
+    width: 33.33%;
+    height: 33.33%;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+}
+#controls #dpad .btn:before{
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+}
+#controls #dpad .left{
+    top: 33.33%;
+    left: 0;
+}
+#controls #dpad .left:before{
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgba(0,0,0,0.25);
+    margin-left: -5px;
+    margin-top: -10px;
+}
+#controls #dpad .up{
+    top: 0;
+    left: 33.33%;
+}
+#controls #dpad .up:before{
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(0,0,0,0.25);
+    margin-left: -10px;
+    margin-top: -5px;
+}
+#controls #dpad .right{
+    top: 33.33%;
+    right: 0;
+}
+#controls #dpad .right:before{
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgba(0,0,0,0.25);
+    margin-left: -5px;
+    margin-top: -10px;
+}
+#controls #dpad .down{
+    left: 33.33%;
+    bottom: 0;
+}
+#controls #dpad .down:before{
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0,0,0,0.25);
+    margin-left: -10px;
+    margin-top: -5px;
+}
+
+#controls #buttons{
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    max-width: 40vh;
+    max-height: 40vh;
+    right: 5vw;
+    top: 5vh;
+}
+
+#controls #buttons .btn{
+    position: absolute;
+    width: 33%;
+    height: 33%;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 100%;
+    display: table;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+}
+#controls #buttons ._a{
+    left: 0;
+    top: 33%;
+}
+#controls #buttons ._a:before{
+    content: " ";
+    border-radius: 100%;
+    border: 1% solid rgba(0,0,0,0.25);
+    width: 50%;
+    height: 50%;
+    left: 24%;
+    top: 24%;
+}
+#controls #buttons ._b{
+    top:0;
+    right:0;
+}
+#controls .start{
+    position: absolute;
+    display: inline-block;
+    border-radius: 4vh;
+    width: 20vw;
+    height: 4vh;
+    bottom: 2.5vh;
+    left: 40vw;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+}

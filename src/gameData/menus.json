@@ -1,0 +1,109 @@
+{
+	"startScreen":{
+		"title":"New Game",
+		"text":"The JavaScript Role Playing Game (JSRPG).",
+		"type":"custom",
+		"back":"continueGame",
+		"submit":[
+			{
+				"text":"Play",
+				"action":"playNewGame"
+			}
+		]
+	},
+	"continueGame":{
+		"title":"JSRPG",
+		"text":"Welcome back! Would you like to continue your journey, or start a new game?",
+		"type":"custom",
+		"submit":[
+			{
+				"text":"Continue",
+				"action":"playCurrentGame"
+			},
+			{
+				"text":"New Game",
+				"action":"openSubmenu",
+				"menu":"startScreen"
+			}
+		]
+	},
+	"mainMenu":{
+		"title":"JSRPG",
+		"text":"Main Menu",
+		"type":"submenu",
+		"back":"exitMenu",
+		"list":[
+			"save",
+			"inventory",
+			"quests",
+			"character",
+			"settings"
+		]
+	},
+	"save":{
+		"title":"Save",
+		"text":"Save my game data to my browser's local storage.",
+		"back":"mainMenu",
+		"submit":[
+			{
+				"text":"Save",
+				"action":"saveCurrentGame"
+			}
+		]
+	},
+	"saveComplete":{
+		"title":"Save Complete",
+		"text":"Fuck yeah!",
+		"submit":[
+			{
+				"text":"Ok",
+				"action":"okSaveComplete"
+			}
+		]
+	},
+	"quests":{
+		"title":"Quests",
+		"text":"Shit to do, people to see, stuff to kill.",
+		"back":"mainMenu"
+	},
+	"inventory":{
+		"title":"Inventory",
+		"text":"All the crap that owns you.",
+		"type":"submenu",
+		"back":"mainMenu",
+		"list":[
+			"items",
+			"weapons",
+			"armor"
+		]
+	},
+	"items":{
+		"title":"Items",
+		"text":"They do things.",
+		"type":"itemList",
+		"back":"inventory"
+	},
+	"weapons":{
+		"title":"Weapons",
+		"text":"For slaying your enemies.",
+		"type":"itemList",
+		"back":"inventory"
+	},
+	"armor":{
+		"title":"Armor",
+		"text":"It protects your physical body.",
+		"type":"itemList",
+		"back":"inventory"
+	},
+	"character":{
+		"title":"Character",
+		"text":"Your Stats",
+		"back":"mainMenu"
+	},
+	"settings":{
+		"title":"Settings",
+		"text":"Changing how you play the game.",
+		"type":"custom",
+		"back":"mainMenu"
+	}
+}

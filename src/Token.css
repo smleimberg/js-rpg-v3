@@ -1,0 +1,78 @@
+
+
+.map .token{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+}
+
+.map .token .head{
+  display: inline-block;
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  background-color: #EAC086;
+  left: 30%;
+  top: 0;
+}
+.map .token .neck{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 5%;
+  background-color: #EAC086;
+  left: 40%;
+  top: 30%;
+}
+.map .token .torso{
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  background-color: #00f;
+  left: 25%;
+  bottom: 20%;
+}
+.map .token .arm.left{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 35%;
+  background-color: #EAC086;
+  top: 35%;
+  left: 15%;
+  transform: rotate(20deg);
+  transform-origin: 0 0;
+}
+.map .token .arm.right{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 35%;
+  background-color: #EAC086;
+  top: 35%;
+  right: 15%;
+  transform: rotate(-20deg);
+  transform-origin: 100% 0;
+}
+.map .token .leg.left{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: #EAC086;
+  bottom: 0;
+  left: 25%;
+}
+.map .token .leg.right{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: #EAC086;
+  bottom: 0;
+  right: 25%;
+}
