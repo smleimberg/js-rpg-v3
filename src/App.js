@@ -9,6 +9,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleControlClick = this.handleControlClick.bind(this);
     this.state = {
       "action":"none",
       "menuOpen":false,
@@ -33,8 +34,17 @@ class App extends Component {
       }
     });
   }
+  handleControlClick(e){
+    var fn = e.target.getAttribute('data-btn');
+    this.performAction(fn);
+    this.setState({"action":fn});
+  }
   componentDidMount(){
     document.getElementById("body").addEventListener("keydown", this.handleKeyDown);
+    var controlButtons = document.querySelectorAll("#controls .btn");
+    for(var i=0;i<controlButtons.length;i++){
+      controlButtons[i].addEventListener('click',this.handleControlClick);
+    }
   }
   render() {
     var menuIs = this.state.menuOpen ? 'open' : 'closed';
@@ -47,7 +57,7 @@ class App extends Component {
       <div id="app" className={appClasses}>
         <Map ref="map" menuIs={menuIs} action={mapAction} />
         <Menu ref="menu" menuIs={menuIs} action={menuAction} />
-        <div id="controls">
+        <div id="controls" className="controls">
           <div id="dpad">
             <a className="left btn" data-btn="w" href="#left-btn"><span>a</span></a>
             <a className="up btn" data-btn="n" href="#up-btn"><span>w</span></a>

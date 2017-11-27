@@ -1,9 +1,5 @@
 
 
-.controls-gbc #map{
-  height: 50vh;
-  max-height: 50vh;
-}
 .menu-open #map{
   display: none;
 }

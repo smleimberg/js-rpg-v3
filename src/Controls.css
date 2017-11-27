@@ -26,7 +26,7 @@
     max-width: 40vh;
     max-height: 40vh;
     left: 5vw;
-    top: 5vh;
+    bottom: 5vh;
 }
 #controls #dpad .btn{
     position: absolute;
@@ -97,7 +97,7 @@
     max-width: 40vh;
     max-height: 40vh;
     right: 5vw;
-    top: 5vh;
+    bottom: 5vh;
 }
 
 #controls #buttons .btn{
