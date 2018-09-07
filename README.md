@@ -1,6 +1,11 @@
-#JSRPG
+# JSRPG
 
-This is version 3 of my JSRPG project. The first was built with impress.js. The second was built with just HTML and jQuery. This version, version 3, is build with React.js.
+This is version 3 of my JSRPG project. It's vastly improved since v1, but I have since moved on to V4.
+
+- V1 was built with impress.js
+- V2 was built with jQuery
+- V3 was built with React (this version)
+- V4 was built with React + Redux (latest)
 
 ## Create React App
 
