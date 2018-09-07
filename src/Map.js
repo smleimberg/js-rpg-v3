@@ -53,13 +53,13 @@ class Map extends Component {
       case 'w': new_col = new_col-1; break;
       default: break;
     }
+    character.location.facing = dir;
+    character.location.foot = character.location.foot==='l' ? 'r' : 'l' ;
     if(this.maybeActivateTile(dir,new_row,new_col)===false){
       character.location.row = new_row;
       character.location.col = new_col;
-      character.location.facing = dir;
-      character.location.foot = character.location.foot==='l' ? 'r' : 'l' ;
-      this.setState({character});
     }
+    this.setState({character});
   }
   maybeActivateTile(dir,new_row,new_col){
     var new_tile = 'r'+new_row+'_c'+new_col;
@@ -81,7 +81,7 @@ class Map extends Component {
       }
     }else if( this.state.map.tiles.hasOwnProperty(new_tile) && this.state.map.tiles[new_tile].hasOwnProperty('object') ){
       var tileObject = this.state.map.tiles[new_tile].object;
-      if( tileObject.type==='portal' && tileObject.direction==='c'){
+      if( tileObject.type==='portal' && tileObject.direction==='_C'){
         var ntCharacter = this.state.character;
         var ntPortal = this.state.map.tiles[new_tile].object;
         ntCharacter.location.map = ntPortal.map;
@@ -122,17 +122,13 @@ class Map extends Component {
     max_tile_cols = (max_tile_cols%2===0) ? max_tile_cols-1 : max_tile_cols;
 
     if( max_tile_rows < min_tile_diameter || max_tile_cols < min_tile_diameter ){
-      console.log('small!');
       if( max_tile_rows===max_tile_cols ){
         map_font_size = Math.floor(px_width/min_tile_diameter);
       }else if( max_tile_rows < min_tile_diameter ){
-        console.log('row');
         map_font_size = Math.floor(px_height/min_tile_diameter);
       }else if( max_tile_cols < min_tile_diameter ){
-        console.log('col');
         map_font_size = Math.floor(px_width/min_tile_diameter);
       }
-      console.log('mfs:'+map_font_size)
       max_tile_rows = Math.floor(px_height/map_font_size);
       max_tile_rows = (max_tile_rows%2===0) ? max_tile_rows-1 : max_tile_rows;
       max_tile_cols = Math.floor(px_width/map_font_size);
@@ -150,13 +146,9 @@ class Map extends Component {
 
   }
 
-  /* RENDER */
-  render() {
+  buildTiles() {
     var character = this.state.character;
     var tilesHTML = [];
-    var backgroundPosition = '0px 0px';
-    var backgroundImage = 'none';
-
 
     var char_row_col = 'r'+character.location.row+'_c'+character.location.col;
     var rmin = (parseInt(character.location.row,10)-Math.floor(this.state.max_rows/2));
@@ -170,7 +162,7 @@ class Map extends Component {
         var key = 'r'+r+'_c'+c;
         var tileObjects = [];
         if(key===char_row_col){
-          tileObjects.push( <Token key="player"/> );
+          tileObjects.push( <Token key="player" facing={character.location.facing} foot={character.location.foot} /> );
         }
         if(this.state.map.tiles.hasOwnProperty(key)) {
           if(this.state.map.tiles[key].hasOwnProperty('scenery')){
@@ -207,26 +199,19 @@ class Map extends Component {
       }
       tilesHTML.push( React.createElement('ul',{'className':'row','id':'row_'+r,'key':'row_'+r},columns) );
     }
+    return tilesHTML;
+  }
 
-    var bgPosLeft = (rmin*-1)*this.state.tile_size;
-    var bgPosTop = (cmin*-1)*this.state.tile_size;
-    backgroundPosition = bgPosTop+'px '+bgPosLeft+'px';
-
-
-    if(this.state.map.hasOwnProperty('background') && this.state.map.background===true){
-      backgroundImage = "url('/gameData/maps/"+this.state.map.name+"-back.png')";
-    }
+  /* RENDER */
+  render() {
+    var tilesHTML = this.buildTiles();
     return (
       <div id="map" className="map table" ref={(divElement)=>this.divElement=divElement}
         style={{
           fontSize: this.state.map_font_size+"px"
         }} >
         <div className="table-cell">
-          <div className="tile-wrap"
-            style={{
-              backgroundImage:backgroundImage,
-              backgroundPosition:backgroundPosition
-            }} >
+          <div className="tile-wrap">
             {tilesHTML}
           </div>
         </div>

@@ -1,9 +1,4 @@
-
-
-.menu-open #map{
-  display: none;
-}
-
+/* THE MAP */
 .map{
   margin: 0;
   padding: 0;
@@ -19,9 +14,13 @@
 }
 .table{
   display: table;
+  margin: 0;
+  padding: 0;
 }
 .table-cell{
   display: table-cell;
+  margin: 0;
+  padding: 0;
   vertical-align: middle;
 }
 .map .tile-wrap{
@@ -46,5 +45,5 @@
   vertical-align: top;
   width: 1em;
   height: 1em;
-  line-height: 1;
+  line-height: 1em;
 }

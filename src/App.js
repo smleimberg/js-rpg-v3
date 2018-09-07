@@ -10,31 +10,62 @@ class App extends Component {
     super(props);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleControlClick = this.handleControlClick.bind(this);
+    this.performAction = this.performAction.bind(this);
     this.state = {
       "action":"none",
-      "menuOpen":false,
+      "menuOpen":true,
+      "gameStart":false,
       "settings":require('./gameData/settings.json')
     }
   }
   performAction(fn){
     switch (fn) {
       case 'start':
-        var menuOpen = this.state.menuOpen ? false : true;
-        this.setState({"menuOpen":menuOpen});
+        if(this.state.gameStart){
+          var menuOpen = this.state.menuOpen ? false : true;
+          if(menuOpen){
+            this.setState({
+              "menuOpen":menuOpen,
+              "action":"start"
+            });
+          }
+          this.setState({"menuOpen":menuOpen});
+        }
+        break;
+      case 'menuClose':
+        this.setState({
+          "menuOpen":false
+        });
+        break;
+      case 'playNewGame':
+        this.setState({
+          "menuOpen":false,
+          "gameStart":true
+        });
         break;
       default: break;
     }
   }
   handleKeyDown(e){
     var _=this;
-    Object.keys(_.state.settings.keys.keyCodes).forEach(function(fn) {
-      if(e.keyCode===_.state.settings.keys.keyCodes[fn]){
+    var keyCodes = {
+			"n":87,
+			"e":68,
+			"s":83,
+			"w":65,
+			"a":74,
+			"b":75,
+			"start":32
+		};
+    Object.keys(keyCodes).forEach(function(fn) {
+      if(e.keyCode===keyCodes[fn]){
         _.performAction(fn);
         _.setState({"action":fn});
       }
     });
   }
   handleControlClick(e){
+    e.preventDefault();
     var fn = e.target.getAttribute('data-btn');
     this.performAction(fn);
     this.setState({"action":fn});
@@ -56,7 +87,6 @@ class App extends Component {
     return (
       <div id="app" className={appClasses}>
         <Map ref="map" menuIs={menuIs} action={mapAction} />
-        <Menu ref="menu" menuIs={menuIs} action={menuAction} />
         <div id="controls" className="controls">
           <div id="dpad">
             <a className="left btn" data-btn="w" href="#left-btn"><span>a</span></a>
@@ -70,8 +100,10 @@ class App extends Component {
           </div>
           <a className="start btn" data-btn="start" href="#start-btn"><span>space</span></a>
         </div>
+        <Menu ref="menu" menuIs={menuIs} action={menuAction} sendAction={this.performAction}/>
       </div>
     );
+
   }
 }
 

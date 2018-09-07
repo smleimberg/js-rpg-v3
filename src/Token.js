@@ -5,37 +5,37 @@ class Token extends Component {
   constructor(props){
     super(props);
     this.state = {
-      "action":"none"
+      "facing":props.facing,
+      "foot":props.foot
     }
   }
 
   /* INTERACTION FUNCTIONS */
   componentWillReceiveProps(nextProps) {
-    if(nextProps.menuIs==='open'){
-      this.performAction(nextProps.action);
-    }
+    this.setState({
+      "facing":nextProps.facing,
+      "foot":nextProps.foot
+    })
   }
   performAction(fn){
-    switch (fn) {
-      case 'start':
-        //var menuOpen = this.state.menuOpen ? false : true;
-        //this.setState({"menuOpen":menuOpen});
-        break;
-      default: break;
-    }
+
   }
   componentDidMount(){
 
   }
   render() {
+    var tokenClasses = "token facing-"+this.state.facing+" foot-"+this.state.foot;
     return (
-      <span className="token">
+      <span className={tokenClasses}>
         <span className="head">
           <span className="gear"></span>
           <span className="hair"></span>
           <span className="eyes"></span>
         </span>
         <span className="neck">
+          <span className="gear"></span>
+        </span>
+        <span className="torso">
           <span className="gear"></span>
         </span>
         <span className="arm left">
@@ -51,9 +51,6 @@ class Token extends Component {
             <span className="gear"></span>
             <span className="weapon"></span>
           </span>
-        </span>
-        <span className="torso">
-          <span className="gear"></span>
         </span>
         <span className="waist">
           <span className="gear"></span>

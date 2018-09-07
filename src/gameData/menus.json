@@ -1,5 +1,5 @@
 {
-	"startScreen":{
+	"startGame":{
 		"title":"New Game",
 		"text":"The JavaScript Role Playing Game (JSRPG).",
 		"type":"custom",
@@ -31,25 +31,41 @@
 		"title":"JSRPG",
 		"text":"Main Menu",
 		"type":"submenu",
-		"back":"exitMenu",
 		"list":[
-			"save",
+			"saves",
 			"inventory",
 			"quests",
 			"character",
 			"settings"
 		]
 	},
+	"saves":{
+		"title":"Saves",
+		"text":"Manage your game saves.",
+		"type":"submenu",
+		"back":"mainMenu",
+		"list":[
+			"save",
+			"load"
+		]
+	},
 	"save":{
 		"title":"Save",
-		"text":"Save my game data to my browser's local storage.",
-		"back":"mainMenu",
+		"text":"Save your game data to your browser's local storage.",
+		"type":"custom",
+		"back":"saves",
 		"submit":[
 			{
 				"text":"Save",
 				"action":"saveCurrentGame"
 			}
 		]
+	},
+	"load":{
+		"title":"Load",
+		"text":"Load you game data from your browser's local storage.",
+		"type":"custom",
+		"back":"saves"
 	},
 	"saveComplete":{
 		"title":"Save Complete",

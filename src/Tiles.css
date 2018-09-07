@@ -1,21 +1,20 @@
+/* MAP TILES */
 
-
+/* EMPTY TILE */
 .map .column.blank{
   background-color: #000;
 }
 
-/* OBJECTS */
+/* TILE OBJECTS */
 .map .portal{
     position: absolute;
-    display: block;
+    display: inline-block;
 }
 .map .portal.portal-up{
   bottom: 0;
   left: 0;
   width: 100%;
   height: 200%;
-
-
   background: rgba(255,255,255,0.5);
   background: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0.3)), color-stop(100%, rgba(255,255,255,0)));
@@ -36,11 +35,11 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    display: block;
+    display: inline-block;
     background-color: red;
 }
 
-/* GRASS & LEDGES */
+/* GRASS & LEDGE TILES */
 .map .tile.grass{
   background-color: #060;
 }
@@ -51,11 +50,11 @@
   position: relative;
   width: 100%;
   height: 100%;
-  display: block;
-  background-color: darkgreen;
+  display: inline-block;
+  background-color: #030;
 }
 
-/* STONE & WALLS */
+/* STONE & WALL TILES */
 .map .tile.stone{
   background-color: #444;
 }

@@ -4,6 +4,60 @@
 	"width":128,
 	"height":128,
 	"tiles":{
+		"r0_c0":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r0_c1":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r0_c2":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r0_c3":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r0_c4":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r1_c0":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r2_c0":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r3_c0":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
+		"r3_c0":{
+			"scenery":{
+				"class":"scenery tree",
+				"type":"wall"
+			}
+		},
 		"r5_c5":{
 			"scenery":{
 				"class":"stone wall",

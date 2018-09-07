@@ -18,6 +18,94 @@
   left: 30%;
   top: 0;
 }
+.map .token.facing-s .head .hair,
+.map .token.facing-e .head .hair,
+.map .token.facing-w .head .hair{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: #000;
+  left: 0;
+  top: 0;
+}
+.map .token.facing-e .head .hair:before{
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 40%;
+  height: 400%;
+  background-color: #000;
+  left: 0;
+  top: 0;
+}
+.map .token.facing-w .head .hair:before{
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  width: 40%;
+  height: 400%;
+  background-color: #000;
+  right: 0;
+  top: 0;
+}
+.map .token.facing-n .head .hair{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  left: 0;
+  top: 0;
+}
+.map .token .head .eyes{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  left: 0;
+  top: 40%;
+}
+.map .token.facing-s .head .eyes:before{
+  display: inline-block;
+  content: " ";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #000;
+  left: 20%;
+  top: 0;
+}
+.map .token.facing-e .head .eyes:before{
+  display: inline-block;
+  content: " ";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #000;
+  right: 0;
+  top: 0;
+}
+.map .token.facing-s .head .eyes:after{
+  display: inline-block;
+  content: " ";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #000;
+  right: 20%;
+  top: 0;
+}
+.map .token.facing-w .head .eyes:after{
+  display: inline-block;
+  content: " ";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #000;
+  left: 0;
+  top: 0;
+}
 .map .token .neck{
   display: inline-block;
   position: absolute;
@@ -36,18 +124,29 @@
   left: 25%;
   bottom: 20%;
 }
-.map .token .arm.left{
+.map .token.facing-s .arm.left,
+.map .token.facing-n .arm.left{
   display: inline-block;
   position: absolute;
   width: 20%;
   height: 35%;
   background-color: #EAC086;
-  top: 35%;
+  top: 40%;
   left: 15%;
   transform: rotate(20deg);
   transform-origin: 0 0;
 }
-.map .token .arm.right{
+.map .token.facing-w .arm.left{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 35%;
+  background-color: #EAC086;
+  top: 40%;
+  left: 40%;
+}
+.map .token.facing-s .arm.right,
+.map .token.facing-n .arm.right{
   display: inline-block;
   position: absolute;
   width: 20%;
@@ -58,7 +157,17 @@
   transform: rotate(-20deg);
   transform-origin: 100% 0;
 }
-.map .token .leg.left{
+.map .token.facing-e .arm.right{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 35%;
+  background-color: #EAC086;
+  top: 40%;
+  left: 40%;
+}
+.map .token.facing-s .leg.left,
+.map .token.facing-n .leg.left{
   display: inline-block;
   position: absolute;
   width: 20%;
@@ -67,7 +176,17 @@
   bottom: 0;
   left: 25%;
 }
-.map .token .leg.right{
+.map .token.facing-w .leg.left{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: #EAC086;
+  bottom: 0;
+  left: 40%;
+}
+.map .token.facing-s .leg.right,
+.map .token.facing-n .leg.right{
   display: inline-block;
   position: absolute;
   width: 20%;
@@ -75,4 +194,13 @@
   background-color: #EAC086;
   bottom: 0;
   right: 25%;
+}
+.map .token.facing-e .leg.right{
+  display: inline-block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: #EAC086;
+  bottom: 0;
+  left: 40%;
 }
